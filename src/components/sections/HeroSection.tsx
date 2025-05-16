@@ -37,7 +37,7 @@ export function HeroSection() {
         </h1>
 
         <div 
-          className="text-xl sm:text-2xl md:text-3xl text-foreground/80 mb-8 h-16 md:h-10 animate-fadeInUp"
+          className="text-xl sm:text-2xl md:text-3xl text-foreground/80 mb-6 sm:mb-8 h-16 md:h-10 animate-fadeInUp"
           style={{ animationDelay: '0.6s' }}
         >
           <TypewriterEffect
@@ -64,7 +64,7 @@ export function HeroSection() {
 
       <Link 
         href="#about" 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fadeIn"
+        className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 animate-fadeIn"
         style={{ animationDelay: '1s' }}
         aria-label="Scroll to About section"
       >
