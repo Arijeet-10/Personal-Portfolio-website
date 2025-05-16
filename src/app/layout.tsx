@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google'; // Changed from Geist to Inter as per proposal preference
 import './globals.css';
@@ -5,6 +6,7 @@ import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster";
+import { CustomCursor } from '@/components/effects/CustomCursor';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,6 +27,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider>
+          <CustomCursor />
           <Navbar />
           <main>{children}</main>
           <Footer />

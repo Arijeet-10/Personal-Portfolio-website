@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -115,6 +116,19 @@ body {
   section {
     @apply py-16 md:py-24 px-4 md:px-8 lg:px-16;
   }
+
+  body.custom-cursor-enabled {
+    cursor: none;
+  }
+  body.custom-cursor-enabled a,
+  body.custom-cursor-enabled button,
+  body.custom-cursor-enabled [role="button"],
+  body.custom-cursor-enabled label,
+  body.custom-cursor-enabled select,
+  body.custom-cursor-enabled textarea,
+  body.custom-cursor-enabled input:not([type="radio"]):not([type="checkbox"]) {
+    cursor: none;
+  }
 }
 
 @layer utilities {
@@ -126,6 +140,25 @@ body {
   }
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text;
+  }
+
+  .custom-cursor-dot {
+    @apply fixed rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 z-[9999];
+    width: 10px;
+    height: 10px;
+    background-color: hsl(var(--accent));
+    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s ease, width 0.15s ease, height 0.15s ease, opacity 0.2s ease;
+    opacity: 0; /* Initially hidden, made visible by 'visible' class */
+  }
+
+  .custom-cursor-dot.visible {
+    opacity: 1;
+  }
+  
+  .custom-cursor-dot.pointer-active {
+    @apply scale-[1.8] bg-primary; /* Tailwind's scale and bg-primary */
+     width: 12px;
+     height: 12px;
   }
 }
 
