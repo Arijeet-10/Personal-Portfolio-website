@@ -16,7 +16,7 @@ export function ResumeSection() {
 
         <ScrollAnimationWrapper delay="delay-200" className="text-center mb-12">
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
-            <Link href="/resume.pdf" download="YourName_Resume.pdf" target="_blank">
+            <Link href="/Arijeet Das - Resume.pdf" download="Arijeet_Das_Resume.pdf" target="_blank">
               <Download className="mr-2 h-5 w-5" />
               Download Resume (PDF)
             </Link>

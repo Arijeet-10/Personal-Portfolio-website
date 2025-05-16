@@ -16,49 +16,53 @@ export function HeroSection() {
     >
       <div className="absolute inset-0 bg-dot-pattern opacity-5 dark:opacity-3 pointer-events-none"></div>
       
-      <div className="relative z-10 flex flex-col items-center">
-        <div className="group mb-6">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 lg:gap-16 w-full max-w-4xl lg:max-w-5xl">
+        {/* Image Container */}
+        <div className="group animate-scaleUpFadeIn" style={{ animationDelay: '0.2s' }}>
           <Image
-            src="https://placehold.co/150x150.png"
+            src="/me.jpg"
             alt="Arijeet - Professional Photo"
             width={150}
             height={150}
             data-ai-hint="professional portrait"
-            className="rounded-full shadow-xl border-4 border-card transition-transform duration-300 ease-in-out group-hover:scale-110 animate-scaleUpFadeIn"
-            style={{ animationDelay: '0.2s' }}
+            className="rounded-full shadow-xl border-4 border-card transition-transform duration-300 ease-in-out group-hover:scale-110 md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px]"
           />
         </div>
 
-        <h1 
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 animate-fadeInUp"
-          style={{ animationDelay: '0.4s' }}
-        >
-          <span className="gradient-text">Hi, I’m Arijeet</span>
-        </h1>
-
-        <div 
-          className="text-xl sm:text-2xl md:text-3xl text-foreground/80 mb-6 sm:mb-8 h-16 md:h-10 animate-fadeInUp"
-          style={{ animationDelay: '0.6s' }}
-        >
-          <TypewriterEffect
-            texts={[
-              "Creative Developer",
-              "UI Enthusiast",
-              "Tech Explorer",
-              "Problem Solver"
-            ]}
-            className="font-medium"
-          />
-        </div>
-
-        <div className="animate-fadeInUp" style={{ animationDelay: '0.8s' }}>
-          <Button 
-            asChild 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-accent/50 transition-all duration-300 ease-in-out hover:scale-105"
+        {/* Text Content Container */}
+        <div className="flex flex-col items-center md:items-start md:text-left">
+          <h1 
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 animate-fadeInUp"
+            style={{ animationDelay: '0.4s' }}
           >
-            <Link href="#projects">View My Work</Link>
-          </Button>
+            <span className="gradient-text">Hi, I’m Arijeet Das</span>
+          </h1>
+
+          <div 
+            className="text-xl sm:text-2xl md:text-3xl text-foreground/80 mb-6 sm:mb-8 h-16 md:h-10 animate-fadeInUp"
+            style={{ animationDelay: '0.6s' }}
+          >
+            <TypewriterEffect
+              texts={[
+                "Creative Developer",
+                "UI Enthusiast",
+                "Tech Explorer",
+                "Problem Solver",
+                "Backend Developer"
+              ]}
+              className="font-medium"
+            />
+          </div>
+
+          <div className="animate-fadeInUp" style={{ animationDelay: '0.8s' }}>
+            <Button 
+              asChild 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-accent/50 transition-all duration-300 ease-in-out hover:scale-105"
+            >
+              <Link href="#projects">View My Work</Link>
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -83,4 +87,3 @@ export function HeroSection() {
     </section>
   );
 }
-
