@@ -12,7 +12,10 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-card rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] group">
+    <div 
+      className="bg-card rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] group"
+      data-project-card // Added attribute for custom cursor hover detection
+    >
       <div className="relative w-full aspect-video overflow-hidden">
         <Image
           src={project.imageUrl}
