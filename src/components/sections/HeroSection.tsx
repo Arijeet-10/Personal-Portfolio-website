@@ -22,12 +22,12 @@ export function HeroSection() {
           <Image
             src="/me.jpg"
             alt="Arijeet - Professional Photo"
-            width={150} // Base width for portrait
-            height={200} // Base height for portrait (3:4 aspect ratio)
+            width={180} // Increased base width
+            height={240} // Increased base height (maintaining ~3:4 aspect ratio)
             data-ai-hint="professional portrait"
-            className="rounded-lg shadow-xl border-4 border-card transition-transform duration-300 ease-in-out group-hover:scale-110 object-cover 
-                       md:w-[180px] md:h-[240px] 
-                       lg:w-[200px] lg:h-[266px]"
+            className="rounded-lg shadow-xl border-4 transition-transform duration-300 ease-in-out group-hover:scale-110 object-cover animate-rgb-border 
+                       md:w-[220px] md:h-[293px] 
+                       lg:w-[250px] lg:h-[333px]" // Increased responsive sizes
           />
         </div>
 
@@ -41,7 +41,7 @@ export function HeroSection() {
           </h1>
 
           <div 
-            className="text-xl sm:text-2xl md:text-3xl text-foreground/80 mb-6 sm:mb-8 h-16 md:h-10 animate-fadeInUp"
+            className="text-xl sm:text-2xl md:text-3xl text-foreground/80 mb-6 sm:mb-4 md:mb-8 h-16 md:h-10 animate-fadeInUp"
             style={{ animationDelay: '0.6s' }}
           >
             <TypewriterEffect
@@ -70,7 +70,7 @@ export function HeroSection() {
 
       <Link 
         href="#about" 
-        className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 animate-fadeIn"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 animate-fadeIn" // Adjusted bottom positioning
         style={{ animationDelay: '1s' }}
         aria-label="Scroll to About section"
       >

@@ -57,43 +57,43 @@ body {
   }
 
   .dark {
-    --background: 220 20% 6%; /* Very Dark Blue - Almost Black #0F1014 */
-    --foreground: 210 40% 98%; /* Light Cool Gray */
+    --background: 0 0% 6%; /* #0F0F0F - Very dark grey / almost black */
+    --foreground: 0 0% 95%; /* #F2F2F2 - Light grey for text */
 
-    --card: 220 15% 10%; /* Slightly Lighter Dark Blue */
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 10%; /* #1A1A1A - Darker card background */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 15% 8%; /* Darker Popover */
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 8%; /* #141414 - Even darker popover */
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 190 100% 50%; /* Neon Cyan */
-    --primary-foreground: 220 20% 6%; /* Dark text for high contrast on Neon Cyan */
+    --primary: 180 100% 50%; /* #00FFFF - Neon Cyan */
+    --primary-foreground: 0 0% 6%; /* Dark text for high contrast on Neon Cyan */
 
-    --secondary: 220 10% 12%; /* Muted Dark Blue */
-    --secondary-foreground: 210 30% 80%; /* Muted Light Gray */
+    --secondary: 0 0% 12%; /* #1F1F1F - Muted dark grey */
+    --secondary-foreground: 0 0% 80%; /* #CCCCCC - Muted light grey */
 
-    --muted: 220 10% 18%; /* Lighter Muted Dark Blue */
-    --muted-foreground: 210 20% 60%; /* Dimmer Cool Gray */
+    --muted: 0 0% 18%; /* #2E2E2E - Lighter muted dark grey */
+    --muted-foreground: 0 0% 60%; /* #999999 - Dimmer grey */
 
-    --accent: 285 100% 50%; /* #BF00FF Electric Purple - Kept as per original dark theme setup */
-    --accent-foreground: 0 0% 100%; /* White text for high contrast on Neon Pink */
+    --accent: 300 100% 50%; /* #FF00FF - Neon Magenta/Pink */
+    --accent-foreground: 0 0% 100%; /* White text for high contrast on Neon Magenta */
+    
+    --destructive: 0 100% 50%; /* #FF0000 - Neon Red */
+    --destructive-foreground: 0 0% 100%;
 
-    --destructive: 0 100% 50%; /* Neon Red */
-    --destructive-foreground: 0 0% 100%; /* White text on Neon Red */
-
-    --border: 220 15% 15%; /* Dark Blue Border */
-    --input: 220 15% 18%; /* Slightly Lighter Dark Blue for Inputs */
-    --ring: 190 100% 55%; /* Neon Cyan for Rings, slightly brighter */
+    --border: 0 0% 15%; /* #262626 - Dark border */
+    --input: 0 0% 18%;
+    --ring: 180 100% 50%; /* Neon Cyan for rings */
     
     /* Sidebar variables */
-    --sidebar-background: 220 20% 8%;
-    --sidebar-foreground: 210 30% 90%;
-    --sidebar-primary: 190 100% 50%; /* Neon Cyan */
-    --sidebar-primary-foreground: 220 20% 6%;
-    --sidebar-accent: 220 15% 12%;
-    --sidebar-accent-foreground: 190 100% 50%;
-    --sidebar-border: 220 15% 15%;
-    --sidebar-ring: 190 100% 55%;
+    --sidebar-background: 0 0% 8%; /* #141414 */
+    --sidebar-foreground: 0 0% 90%; /* #E6E6E6 */
+    --sidebar-primary: 180 100% 50%; /* Neon Cyan */
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 12%; /* #1F1F1F */
+    --sidebar-accent-foreground: 180 100% 50%; /* Neon Cyan */
+    --sidebar-border: 0 0% 15%; /* #262626 */
+    --sidebar-ring: 180 100% 55%;
 
     --chart-1: 120 100% 50%; /* Neon Green */
     --chart-2: 60 100% 50%;  /* Neon Yellow */
@@ -246,3 +246,16 @@ body {
   }
 }
 
+/* RGB Border Animation for Hero Image */
+@keyframes rgb-border-animation {
+  0%, 100% { border-color: #ff0000; } /* Bright Red */
+  17% { border-color: #ff7f00; }      /* Orange */
+  33% { border-color: #ffff00; }      /* Yellow */
+  50% { border-color: #00ff00; }      /* Bright Green */
+  67% { border-color: #0000ff; }      /* Bright Blue */
+  83% { border-color: #8b00ff; }      /* Indigo/Violet */
+}
+
+.animate-rgb-border {
+  animation: rgb-border-animation 6s linear infinite;
+}
