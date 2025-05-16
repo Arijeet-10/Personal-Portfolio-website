@@ -147,6 +147,7 @@ body {
     width: 10px;
     height: 10px;
     background-color: hsl(var(--accent));
+    /* Ensure transform and opacity are part of the transition for the moving effect */
     transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s ease, width 0.15s ease, height 0.15s ease, opacity 0.2s ease;
     opacity: 0; /* Initially hidden, made visible by 'visible' class */
   }
@@ -156,9 +157,18 @@ body {
   }
   
   .custom-cursor-dot.pointer-active {
-    @apply scale-[1.8] bg-primary; /* Tailwind's scale and bg-primary */
-     width: 12px;
-     height: 12px;
+    /* The translate(-50%, -50%) is implicitly handled by -translate-x-1/2 -translate-y-1/2, scale comes after */
+    transform: translate(-50%, -50%) scale(1.8); 
+    background-color: hsl(var(--primary));
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Effect for when the cursor is moving */
+  .custom-cursor-dot.moving {
+    opacity: 0.75;
+    /* Scale down slightly when moving. Ensure centering translate is maintained. */
+    transform: translate(-50%, -50%) scale(0.8); 
   }
 }
 
