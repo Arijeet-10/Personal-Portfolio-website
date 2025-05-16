@@ -246,16 +246,16 @@ body {
   }
 }
 
-/* RGB Border Animation for Hero Image */
-@keyframes rgb-border-animation {
-  0%, 100% { border-color: #ff0000; } /* Bright Red */
-  17% { border-color: #ff7f00; }      /* Orange */
-  33% { border-color: #ffff00; }      /* Yellow */
-  50% { border-color: #00ff00; }      /* Bright Green */
-  67% { border-color: #0000ff; }      /* Bright Blue */
-  83% { border-color: #8b00ff; }      /* Indigo/Violet */
+/* Purple Glow Animation for Hero Image */
+@keyframes purple-glow-animation {
+  0%, 100% {
+    box-shadow: 0 0 15px 5px hsla(var(--accent), 0.6), 0 0 5px 2px hsla(var(--accent), 0.8); /* Inner more opaque shadow */
+  }
+  50% {
+    box-shadow: 0 0 25px 10px hsla(var(--accent), 0.4), 0 0 10px 4px hsla(var(--accent), 0.6); /* Larger, softer glow */
+  }
 }
 
-.animate-rgb-border {
-  animation: rgb-border-animation 6s linear infinite;
+.animate-purple-glow {
+  animation: purple-glow-animation 3s ease-in-out infinite;
 }

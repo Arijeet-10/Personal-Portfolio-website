@@ -22,12 +22,12 @@ export function HeroSection() {
           <Image
             src="/me.jpg"
             alt="Arijeet - Professional Photo"
-            width={180} // Increased base width
-            height={240} // Increased base height (maintaining ~3:4 aspect ratio)
+            width={180} 
+            height={240} 
             data-ai-hint="professional portrait"
-            className="rounded-lg shadow-xl border-4 transition-transform duration-300 ease-in-out group-hover:scale-110 object-cover animate-rgb-border 
+            className="rounded-lg shadow-xl animate-purple-glow 
                        md:w-[220px] md:h-[293px] 
-                       lg:w-[250px] lg:h-[333px]" // Increased responsive sizes
+                       lg:w-[250px] lg:h-[333px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" 
           />
         </div>
 
@@ -70,7 +70,7 @@ export function HeroSection() {
 
       <Link 
         href="#about" 
-        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 animate-fadeIn" // Adjusted bottom positioning
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 animate-fadeIn"
         style={{ animationDelay: '1s' }}
         aria-label="Scroll to About section"
       >
@@ -89,4 +89,3 @@ export function HeroSection() {
     </section>
   );
 }
-
