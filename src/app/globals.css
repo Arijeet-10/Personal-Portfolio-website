@@ -246,16 +246,24 @@ body {
   }
 }
 
-/* Purple Glow Animation for Hero Image */
-@keyframes purple-glow-animation {
+/* Blue Neon Fading Border Animation for Hero Image */
+@keyframes blue-neon-border-animation {
   0%, 100% {
-    box-shadow: 0 0 15px 5px hsla(var(--accent), 0.6), 0 0 5px 2px hsla(var(--accent), 0.8); /* Inner more opaque shadow */
+    border-color: hsla(var(--primary), 0.4); /* Using dark mode primary (Neon Cyan) with lower opacity */
+    box-shadow: 0 0 8px hsla(var(--primary), 0.3),
+                0 0 16px hsla(var(--primary), 0.2),
+                0 0 24px hsla(var(--primary), 0.1);
   }
   50% {
-    box-shadow: 0 0 25px 10px hsla(var(--accent), 0.4), 0 0 10px 4px hsla(var(--accent), 0.6); /* Larger, softer glow */
+    border-color: hsla(var(--primary), 0.8); /* Neon Cyan with higher opacity */
+    box-shadow: 0 0 12px hsla(var(--primary), 0.6),
+                0 0 24px hsla(var(--primary), 0.4),
+                0 0 36px hsla(var(--primary), 0.3);
   }
 }
 
-.animate-purple-glow {
-  animation: purple-glow-animation 3s ease-in-out infinite;
+.animate-blue-neon-border {
+  border-style: solid; 
+  /* border-width is applied directly on the component, e.g., border-4 */
+  animation: blue-neon-border-animation 2.5s ease-in-out infinite;
 }

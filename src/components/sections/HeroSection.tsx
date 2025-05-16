@@ -25,7 +25,7 @@ export function HeroSection() {
             width={180} 
             height={240} 
             data-ai-hint="professional portrait"
-            className="rounded-lg shadow-xl animate-purple-glow 
+            className="rounded-lg shadow-xl border-4 animate-blue-neon-border 
                        md:w-[220px] md:h-[293px] 
                        lg:w-[250px] lg:h-[333px] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" 
           />
@@ -89,3 +89,4 @@ export function HeroSection() {
     </section>
   );
 }
+
