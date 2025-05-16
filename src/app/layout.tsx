@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'PersonaFlow | Creative Portfolio',
+  title: 'DevFlow | Creative Portfolio',
   description: 'A personal portfolio website built with Next.js and Tailwind CSS.',
 };
 

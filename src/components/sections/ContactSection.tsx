@@ -14,12 +14,14 @@ import { Github, Linkedin, Twitter, Send, Mail } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 import { ScrollAnimationWrapper } from '@/components/animations/ScrollAnimationWrapper';
 import Link from 'next/link';
+import { X as XIcon } from 'lucide-react'; // if available
+
 
 const socialLinks = [
-  { name: "GitHub", url: "https://github.com", icon: Github, hint:"My GitHub profile" },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: Linkedin, hint:"My LinkedIn profile" },
-  { name: "Twitter", url: "https://twitter.com", icon: Twitter, hint:"My Twitter profile" },
-  { name: "Email", url: "mailto:your.email@example.com", icon: Mail, hint:"Send me an email" },
+  { name: "GitHub", url: "https://github.com/Arijeet-10", icon: Github, hint:"My GitHub profile" },
+  { name: "LinkedIn", url: "www.linkedin.com/in/arijeetdas10", icon: Linkedin, hint:"My LinkedIn profile" },
+  { name: "X", url: "https://x.com/ArijeetD94617", icon: XIcon, hint: "My X profile" },
+  { name: "Email", url: "mailto:arijeetdas999@gmail.com", icon: Mail, hint:"Send me an email" },
 ];
 
 export function ContactSection() {
@@ -73,10 +75,9 @@ export function ContactSection() {
               </div>
             </div>
              <div className="pt-4">
-                <h4 className="font-semibold text-primary">Address (Optional)</h4>
-                <p className="text-muted-foreground">123 Creative Lane, Innovation City, CA 90210</p>
+                
                 <h4 className="font-semibold text-primary mt-2">Phone (Optional)</h4>
-                <p className="text-muted-foreground">(555) 123-4567</p>
+                <p className="text-muted-foreground">+91 9339038689</p>
             </div>
           </ScrollAnimationWrapper>
 
@@ -91,7 +92,7 @@ export function ContactSection() {
                       <FormItem>
                         <FormLabel>Full Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" {...field} className="text-base"/>
+                          <Input placeholder="Your Name" {...field} className="text-base"/>
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -104,7 +105,7 @@ export function ContactSection() {
                       <FormItem>
                         <FormLabel>Email Address</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="john.doe@example.com" {...field} className="text-base"/>
+                          <Input type="email" placeholder="Your Email" {...field} className="text-base"/>
                         </FormControl>
                         <FormMessage />
                       </FormItem>

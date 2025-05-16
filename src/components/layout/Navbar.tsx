@@ -41,7 +41,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="#home" className="flex items-center space-x-2 text-2xl font-bold text-primary">
             <CodeXml className="h-8 w-8" />
-            <span>PersonaFlow</span>
+            <span>DevFlow</span>
           </Link>
           <div className="hidden md:flex items-center space-x-4">
             {navLinks.map(link => <NavLinkItem key={link.href} {...link} />)}
