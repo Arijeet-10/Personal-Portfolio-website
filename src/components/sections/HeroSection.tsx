@@ -22,10 +22,12 @@ export function HeroSection() {
           <Image
             src="/me.jpg"
             alt="Arijeet - Professional Photo"
-            width={150}
-            height={150}
+            width={150} // Base width for portrait
+            height={200} // Base height for portrait (3:4 aspect ratio)
             data-ai-hint="professional portrait"
-            className="rounded-full shadow-xl border-4 border-card transition-transform duration-300 ease-in-out group-hover:scale-110 md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px]"
+            className="rounded-lg shadow-xl border-4 border-card transition-transform duration-300 ease-in-out group-hover:scale-110 object-cover 
+                       md:w-[180px] md:h-[240px] 
+                       lg:w-[200px] lg:h-[266px]"
           />
         </div>
 
@@ -87,3 +89,4 @@ export function HeroSection() {
     </section>
   );
 }
+
